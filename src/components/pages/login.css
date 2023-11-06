@@ -1,0 +1,75 @@
+/** @format */
+
+.login-container {
+  margin-top: 4em;
+  height: 100vh;
+  background-image: url('https://img.freepik.com/premium-photo/19aug19_670672-261.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  width: 100vw;
+}
+.form-group {
+  margin-top: 2em;
+}
+.form-group input {
+  background-color: #f0d9a1;
+}
+.AppForm {
+  width: 600px;
+  margin: auto;
+}
+.login-form {
+  background-color: white;
+  border-radius: 15px;
+  padding: 1em;
+  border: 6px solid black;
+}
+.AppForm .AppFormLeft h1 {
+  font-size: 35px;
+  font-family: 'Marvel', sans-serif;
+  color: white;
+  background-color: red;
+
+  width: 80px;
+  margin: auto;
+  letter-spacing: 2px;
+}
+.AppForm .AppFormLeft input:focus {
+  border-color: #ced4da;
+}
+.AppForm .AppFormLeft input::placeholder {
+  font-size: 15px;
+}
+.AppForm .AppFormLeft i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.AppForm .AppFormLeft a {
+  color: #3a3e42;
+}
+.AppForm .AppFormLeft button {
+  background: linear-gradient(45deg, #f0710a, #edd712);
+  border-radius: 30px;
+}
+.AppForm .AppFormLeft p span {
+  color: rgb(255, 153, 0);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    margin-top: 2em;
+  }
+
+  .AppForm {
+    width: 90%;
+  }
+
+  .AppForm .AppFormLeft h1 {
+    font-size: 24px;
+  }
+}

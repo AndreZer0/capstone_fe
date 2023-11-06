@@ -1,0 +1,26 @@
+/** @format */
+
+.nav {
+  font-family: 'Bangers';
+}
+
+.nav .nav-title {
+  font-size: 2em;
+}
+
+.logo {
+  height: 2em;
+  margin-right: 0.5em;
+}
+
+.redirect {
+  text-decoration: none;
+  margin: auto;
+  padding-right: 1em;
+}
+.me-auto a {
+  color: black;
+}
+.me-auto a:hover {
+  color: white;
+}

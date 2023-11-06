@@ -1,0 +1,100 @@
+/** @format */
+
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  cursor: pointer;
+  font-family: 'Bangers';
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    1px 1px 0 #000;
+}
+.demoPage img {
+  width: 300px;
+  height: 500px;
+}
+
+.last-demoPage {
+  background: rgb(68, 97, 246);
+  background: linear-gradient(
+    180deg,
+    rgba(68, 97, 246, 1) 30%,
+    rgba(130, 37, 7, 1) 60%
+  );
+  color: white;
+  padding: 2em;
+  font-size: 22px;
+}
+
+.end {
+  padding: 1em;
+  color: rgb(255, 250, 250);
+  font-size: 2em;
+  background-color: #000000ea;
+}
+
+.buy {
+  margin-top: 1em;
+}
+
+.buy p {
+  width: 12em;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.first-demoPage {
+  background-image: url('https://i.postimg.cc/x1VbNsVd/pagina.png');
+  background-size: cover;
+}
+
+.col {
+  margin: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .book {
+    flex-direction: column;
+  }
+
+  .buy {
+    font-size: 1.2em;
+  }
+}
+
+.text-center {
+  position: relative;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 6px solid black;
+  padding: 0;
+  width: 80%;
+  margin: auto;
+  font-family: 'Bangers';
+  font-size: larger;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    border-width: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    font-size: medium;
+  }
+}
+
+.descrizione {
+  padding: 10px;
+  position: relative;
+}
+
+.descrizione p {
+  margin: 0;
+  padding: 4em;
+}
