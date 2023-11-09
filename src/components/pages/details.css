@@ -4,29 +4,15 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: wrap;
-  margin-top: 2em;
+
   cursor: pointer;
   font-family: 'Bangers';
   letter-spacing: 2px;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
-    1px 1px 0 #000;
 }
+
 .demoPage img {
   width: 300px;
   height: 500px;
-}
-
-.last-demoPage {
-  background: rgb(68, 97, 246);
-  background: linear-gradient(
-    180deg,
-    rgba(68, 97, 246, 1) 30%,
-    rgba(130, 37, 7, 1) 60%
-  );
-  color: white;
-  padding: 2em;
-  font-size: 22px;
 }
 
 .end {
@@ -42,17 +28,15 @@
 
 .buy p {
   width: 12em;
-  margin-top: 10px;
+
   font-size: 1.2em;
 }
-
-.first-demoPage {
-  background-image: url('https://i.postimg.cc/x1VbNsVd/pagina.png');
-  background-size: cover;
+.bio {
+  margin-top: 20px;
+  font-size: 1.4em;
 }
 
 .col {
-  margin: 10px;
   text-align: center;
 }
 
@@ -66,29 +50,6 @@
   }
 }
 
-.text-center {
-  position: relative;
-  background: #ffffff;
-  border-radius: 20px;
-  border: 6px solid black;
-  padding: 0;
-  width: 80%;
-  margin: auto;
-  font-family: 'Bangers';
-  font-size: larger;
-
-  @media (max-width: 768px) {
-    width: 90%;
-    border-width: 3px;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  @media (max-width: 768px) {
-    font-size: medium;
-  }
-}
-
 .descrizione {
   padding: 10px;
   position: relative;
@@ -97,4 +58,81 @@
 .descrizione p {
   margin: 0;
   padding: 4em;
+}
+
+.comments {
+  margin: auto;
+}
+
+.mod-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  font-family: Bangers;
+}
+
+.mod-buttons h2 {
+  font-size: 3em;
+}
+
+.modify,
+.delete {
+  margin-top: 1em;
+  padding: 1em;
+}
+
+.modify p,
+.delete p {
+  font-size: 2em;
+}
+.comment-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
+}
+.comment-box {
+  background-color: #eef2f5;
+  width: 100vw;
+}
+.addtxt {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 13px;
+  width: 400px;
+  background-color: #e5e8ed;
+  font-weight: 500;
+}
+.form-control:focus {
+  color: #000;
+}
+.second {
+  width: 80vw;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+.avatar img {
+  border-radius: 50%;
+}
+
+.avatar :nth-child(1) {
+  font-size: 20px;
+}
+
+.avatar :nth-child(1) span {
+  margin-left: 10px;
+  color: blue;
+  font-size: 20px;
+}
+
+.add-comment {
+  margin: auto;
+  width: 80vw;
+}
+
+.add-comment .select {
+  width: 100px;
 }

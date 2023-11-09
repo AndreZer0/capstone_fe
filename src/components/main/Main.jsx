@@ -3,24 +3,17 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { Container, Col, Row } from 'react-bootstrap';
-import ResponsivePagination from 'react-responsive-pagination';
+
 import './main.css';
 import Jumbotron from '../jumbotron/Jumbotron';
 import { nanoid } from 'nanoid';
-
+import { useSession } from '../../hooks/useSession';
 const Main = () => {
   const [allCards, setAllCards] = useState({ card: [] });
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handlePagination = value => {
-    setCurrentPage(value);
-  };
-
   const getCards = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/cardsPage?page=${currentPage}`
+        `${process.env.REACT_APP_SERVER_BASE_URL}/cardsPage`
       );
       setAllCards(response.data);
     } catch (e) {
@@ -30,7 +23,7 @@ const Main = () => {
 
   useEffect(() => {
     getCards();
-  }, [currentPage]);
+  }, []);
 
   useEffect(() => {
     const $cards = document.querySelectorAll('.custom-card');
@@ -93,7 +86,7 @@ const Main = () => {
             className='panel'
             key={nanoid()}>
             <Link
-              to={`/detail/${post._id}`}
+              to={`/comic/${post._id}`}
               className='custom-card-link'>
               <p className='text top-left'>{post.title}</p>
               <img

@@ -12,12 +12,14 @@ export const useSession = () => {
   const navigate = useNavigate();
 
   const checkTokenExpirationTime = () => {
-    const convertUnixDateToMillisecond = decodedSession.exp * 1000;
-    const expirationDate = new Date(convertUnixDateToMillisecond);
-    const currentDate = new Date();
-    console.log(expirationDate);
-    if (expirationDate < currentDate) {
-      localStorage.clear();
+    if (decodedSession) {
+      const convertUnixDateToMillisecond = decodedSession.exp * 1000;
+      const expirationDate = new Date(convertUnixDateToMillisecond);
+      const currentDate = new Date();
+      console.log(expirationDate);
+      if (expirationDate < currentDate) {
+        localStorage.clear();
+      }
     }
   };
 

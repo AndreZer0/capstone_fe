@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate, Link } from 'react-router-dom';
 import './signup.css';
 
 const Signup = () => {
@@ -240,6 +240,12 @@ const Signup = () => {
                   </div>
                 )}
               </div>
+              <p className='text-center mt-5'>
+                Hai già un account?
+                <Link to='/login'>
+                  <span className='link-login'> Vai al login!</span>
+                </Link>
+              </p>
             </Form>
           </main>
         )}
