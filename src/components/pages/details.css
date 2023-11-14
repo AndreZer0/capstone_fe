@@ -1,25 +1,115 @@
 /** @format */
 
-.book {
+.main {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  background-color: #d9d9d9;
 
-  cursor: pointer;
-  font-family: 'Bangers';
-  letter-spacing: 2px;
+  margin: 2em;
 }
 
-.demoPage img {
-  width: 300px;
-  height: 500px;
+.book {
+  --book-height: 800px;
+  --book-ratio: 1.4;
 }
 
+.book > div {
+  height: var(--book-height);
+  width: 500px;
+  overflow: auto;
+
+  transform: scale(0.9);
+  border-radius: 6px;
+  transform-origin: left;
+}
+
+.book-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 9;
+
+  color: white;
+  transition: transform 2s;
+}
+.book-cover img {
+  width: 100%;
+  height: 100%;
+}
+
+.separator {
+  --separator-size: 8px;
+  width: var(--separator-size);
+  height: var(--separator-size);
+  background-color: #dbd75d;
+  margin: 50px auto 60px auto;
+  border-radius: 50%;
+  position: relative;
+}
+
+.separator::after,
+.separator::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  background-color: white;
+  height: 2px;
+  top: calc(50% - 1px);
+}
+
+.separator::after {
+  left: 15px;
+}
+
+.separator::before {
+  right: 15px;
+}
+
+.book-content {
+  transform: scale(0.9) translateY(30px);
+  background-color: white !important;
+  transition: all 0.3s 1s;
+}
+.book-content img {
+  width: 100%;
+}
+.book-cover > div {
+  transition: opacity 0s 0.6s;
+}
+
+.book:hover > .book-cover {
+  transform: rotateY(180deg) scale(0.9);
+}
+
+.book:hover > .book-cover > div {
+  opacity: 0;
+}
+
+.book:hover > .book-content {
+  transform: scale(0.9) translateY(0px);
+}
+
+.album-price {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-weight: bold;
+}
+.capture {
+  text-align: center;
+  font-family: Bangers;
+}
 .end {
   padding: 1em;
   color: rgb(255, 250, 250);
-  font-size: 2em;
+  font-size: 1.6em;
   background-color: #000000ea;
+}
+
+.end svg {
+  color: white;
+  display: block;
+  margin: auto;
+  margin-top: 3em;
 }
 
 .buy {
@@ -29,37 +119,29 @@
 .buy p {
   width: 12em;
 
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .bio {
   margin-top: 20px;
-  font-size: 1.4em;
+  font-size: 1.5em;
+}
+.bio h3 {
+  color: red;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
-.col {
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .book {
-    flex-direction: column;
-  }
-
+@media (max-width: 800px) {
   .buy {
     font-size: 1.2em;
   }
 }
-
-.descrizione {
-  padding: 10px;
-  position: relative;
+@media (max-width: 600px) {
+  .book > div {
+    width: 60vw;
+    height: 400px;
+  }
 }
-
-.descrizione p {
-  margin: 0;
-  padding: 4em;
-}
-
 .comments {
   margin: auto;
 }
@@ -90,11 +172,17 @@
 .comment-section {
   display: flex;
   justify-content: center;
-  margin-bottom: 3em;
+  margin-bottom: 80px;
 }
 .comment-box {
   background-color: #eef2f5;
-  width: 100vw;
+  width: 90%;
+}
+.comment-box h2 {
+  margin-left: 3em;
+  font-size: 3em;
+  font-family: Bangers;
+  letter-spacing: 3px;
 }
 .addtxt {
   padding-top: 10px;

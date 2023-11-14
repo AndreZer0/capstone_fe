@@ -146,6 +146,10 @@
   color: #dbdb00;
 }
 
+.elements-Form {
+  display: none;
+}
+
 @keyframes check {
   0% {
     width: 0;

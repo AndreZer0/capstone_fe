@@ -7,7 +7,7 @@ import axios from 'axios';
 import './main.css';
 import Jumbotron from '../jumbotron/Jumbotron';
 import { nanoid } from 'nanoid';
-import { useSession } from '../../hooks/useSession';
+
 const Main = () => {
   const [allCards, setAllCards] = useState({ card: [] });
   const getCards = async () => {
@@ -103,9 +103,6 @@ const Main = () => {
         <div className='panel'>
           <p className='speech'>A speech bubble</p>
         </div>
-        <div className='panel'></div>
-        <div className='panel'></div>
-        <div className='panel'></div>
       </article>
       <h3
         className='soon'
@@ -155,42 +152,27 @@ const Main = () => {
         id='secret-container'>
         COMING SOON
       </h3>
-      <div className='secret-container'>
-        <div className='custom-card'>
-          <div className='card-image'>
-            <img
-              src='https://i.postimg.cc/BvqHRdkP/5a4613ddd099a2ad03f9c994.png'
-              alt='cover'
-            />
-          </div>
-          <div className='secret-text'>
-            <h2 className='secret'>TOP SECRET</h2>
-          </div>
-          <div className='glow'></div>
+      <div className='secret-container-2'>
+        <div className=' panel-1'>
+          <p className='text bottom-left'>Top secret...</p>
+          <img
+            className='secret-image'
+            src='https://i.postimg.cc/ZKzy3pvZ/CC37-BA0-D-4-EFF-4-D37-9842-61-EC327-AFBFF.png'
+          />
         </div>
-        <div className='custom-card'>
-          <div className='card-image'>
-            <img
-              src='https://i.postimg.cc/BvqHRdkP/5a4613ddd099a2ad03f9c994.png'
-              alt='cover'
-            />
-          </div>
-          <div className='secret-text'>
-            <h2 className='secret'>TOP SECRET</h2>
-          </div>
-          <div className='glow'></div>
+        <div className=' panel-2'>
+          <p className='text top-left'>Top secret...</p>
+          <img
+            className='secret-image'
+            src='https://i.postimg.cc/ZYddCVRV/BB1506-B2-9-A48-411-F-98-B8-F2-F4174652-A4.png'
+          />
         </div>
-        <div className='custom-card'>
-          <div className='card-image'>
-            <img
-              src='https://i.postimg.cc/BvqHRdkP/5a4613ddd099a2ad03f9c994.png'
-              alt='cover'
-            />
-          </div>
-          <div className='secret-text'>
-            <h2 className='secret'>TOP SECRET</h2>
-          </div>
-          <div className='glow'></div>
+        <div className=' panel-3'>
+          <p className='text bottom-right'>Top secret...</p>
+          <img
+            className='secret-image'
+            src='https://i.postimg.cc/2jb4nCHd/F386-C6-F1-F7-B6-4-A98-81-C7-E87-C4-CFD732-B.png'
+          />
         </div>
       </div>
     </>

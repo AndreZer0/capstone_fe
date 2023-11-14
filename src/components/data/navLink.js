@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const NavLinks = () => {
   const linkStyle = {
-    fontSize: '1.2em',
+    fontSize: '1.3em',
   };
 
   return (

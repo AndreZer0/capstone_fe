@@ -1,243 +1,138 @@
 /** @format */
 
-import React, { useState, useEffect, useCallback } from 'react';
-import './details.css';
-import { useParams, useNavigate } from 'react-router-dom';
-import HTMLFlipBook from 'react-pageflip';
-import { Button, Col, Form } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import {
+  useDetailsContext,
+  DetailsProvider,
+} from '../../context/DetailsContext';
+
+import { Button, Col, Row, Container } from 'react-bootstrap';
 import { nanoid } from 'nanoid';
+import { useParams, useNavigate } from 'react-router-dom';
 import MyNav from '../navigation/MyNav';
 import Footer from '../footer/Footer';
 import { useSession } from '../../hooks/useSession';
-import axios from 'axios';
+
+import { addCart, prodotti } from '../../context/CartContext';
+import { useDispatch, useSelector } from 'react-redux';
+
+import './details.css';
 
 const DetailPage = () => {
+  const {
+    comicPage,
+
+    comments,
+
+    newComment,
+    getComicsByCardId,
+    getComments,
+    addNewComment,
+    isUserCommentAuthor,
+    handleEditComment,
+    handleDeleteComment,
+    setNewComment,
+  } = useDetailsContext();
+
   const session = useSession();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const { comicId } = useParams();
-  const { cardsId } = useParams();
-  const [comicPage, setComicPage] = useState([]);
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedData, setEditedData] = useState({});
-  const [isloading, setisLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [comments, setComments] = useState([]);
-  const [postComments, setPostComments] = useState({});
-  const [commentAdded, setCommentAdded] = useState(false);
-  const [newComment, setNewComment] = useState('');
-  const getComicsByCardId = async cardId => {
-    try {
-      console.log(
-        'Invio richiesta al server per ottenere i comic della card:',
-        cardId
-      );
-      setisLoading(true);
-      const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/cards/${cardId}/comics`
-      );
-      const data = await response.json();
-      console.log('Dati ricevuti dal server:', data);
-
-      if (response.ok) {
-        setComicPage(data);
-      } else {
-        setError(data.message);
-      }
-
-      setisLoading(false);
-    } catch (e) {
-      setError(e);
-      console.error('Errore durante la richiesta:', e);
-    }
-  };
+  const products = useSelector(prodotti);
 
   const handleEditClick = () => {
     navigate(`/modify/${comicId}`);
   };
 
-  const getComments = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/comments/${comicId}`
-      );
-      const data = await response.json();
-      setComments(data);
-    } catch (e) {
-      console.error('Errore durante il recupero dei commenti', e);
-    }
-  };
-
-  const addNewComment = async e => {
-    e.preventDefault();
-    try {
-      const response = await axios.post(
-        `${process.env.REACT_APP_SERVER_BASE_URL}/cards/${comicId}/comment/create`,
-        {
-          username: session.id,
-          content: newComment,
-        }
-      );
-
-      if (response.status === 201) {
-        const newCommentData = response.data.payload;
-        setPostComments(prevComments => ({
-          ...prevComments,
-          [cardsId]: [...(prevComments[cardsId] || []), newCommentData],
-        }));
-
-        setNewComment('');
-        setCommentAdded(true);
-        getComments();
-      } else {
-        console.error(
-          "Errore durante l'invio del commento: risposta non valida"
-        );
-      }
-    } catch (error) {
-      console.error("Errore durante l'invio del commento:", error);
-    }
-  };
-
-  const isUserCommentAuthor = comment => {
-    return comment.username === session.id;
-  };
-
-  const handleEditComment = async comment => {
-    if (isUserCommentAuthor(comment)) {
-      const updatedComment = prompt('Modifica il commento:', comment.content);
-      if (updatedComment !== null) {
-        try {
-          const response = await axios.put(
-            `${process.env.REACT_APP_SERVER_BASE_URL}/cards/${comicId}/comments/${comment._id}/modify`,
-            {
-              content: updatedComment,
-            }
-          );
-
-          if (response.status === 200) {
-            const updatedComments = {
-              ...comments,
-              [comment._id]: { ...comment, content: updatedComment },
-            };
-            setComments(updatedComments);
-            window.alert('Commento modificato con successo!');
-            getComments(updatedComments);
-          } else {
-            console.error(
-              "Errore durante l'aggiornamento del commento. Status code:",
-              response.status
-            );
-          }
-        } catch (error) {
-          console.error("Errore durante l'aggiornamento del commento:", error);
-        }
-      }
-    } else {
-      console.log("Non sei l'autore di questo commento");
-    }
-  };
-  const handleDeleteComment = async comment => {
-    if (isUserCommentAuthor(comment)) {
-      if (window.confirm('Sei sicuro di voler eliminare questo commento?')) {
-        try {
-          const response = await axios.delete(
-            `${process.env.REACT_APP_SERVER_BASE_URL}/cards/${comicId}/comments/${comment._id}/delete`
-          );
-          window.alert('Commento eliminato con successo!');
-          getComments();
-          if (response.status === 204) {
-            const updatedComments = comments.filter(c => c._id !== comment._id);
-            setComments(updatedComments);
-          } else {
-            console.error(
-              "Errore durante l'eliminazione del commento. Status code:",
-              response.status
-            );
-          }
-        } catch (error) {
-          console.error("Errore durante l'eliminazione del commento:", error);
-        }
-      }
-    } else {
-      console.log("Non sei l'autore di questo commento e non puoi eliminarlo.");
-    }
+  const handleAddToCart = album => {
+    dispatch(
+      addCart({
+        id: album._id,
+        title: album.title,
+        price: album.price,
+        cover: album.cover,
+      })
+    );
   };
 
   useEffect(() => {
     getComicsByCardId(comicId);
     getComments();
   }, [comicId]);
+
   return (
     <>
       <MyNav />
 
       {session.role === 'admin' && (
         <>
-          {isEditing ? (
+          <div className='mod-buttons'>
+            <h3 className='welcome-admin'>
+              Benvenuto {session.firstName}, scegli se modificare la tua card o
+              eliminarla del tutto
+            </h3>
             <Button
-              className='save'
+              className='modify'
               variant='success'
-              onClick={handleSaveClick}>
-              Salva
+              onClick={handleEditClick}>
+              <p> Vai alla pagina di modifica</p>
             </Button>
-          ) : (
-            <div className='mod-buttons'>
-              <h2 className='welcome-admin'>
-                Benvenuto {session.firstName}, scegli se modificare la tua card
-                o eliminarla del tutto
-              </h2>
-              <Button
-                className='modify'
-                variant='success'
-                onClick={handleEditClick}>
-                <p> Vai alla pagina di modifica</p>
-              </Button>
-              <Button
-                className='delete'
-                variant='danger'>
-                <p>Elimina</p>
-              </Button>
-            </div>
-          )}
+            <Button
+              className='delete'
+              variant='danger'>
+              <p>Elimina</p>
+            </Button>
+          </div>
         </>
       )}
-      <div className='book'>
+      <div className='libro-dettaglio'>
         {comicPage &&
           comicPage?.comics?.map((album, i) => (
             <Col key={nanoid()}>
-              <HTMLFlipBook
-                width={300}
-                height={500}>
-                <div className='demoPage'>
-                  <img src={album.cover} />
+              <div className='main'>
+                <div class='book'>
+                  <div class='book-cover'>
+                    <img src={album.cover} />
+                  </div>
+                  <div class='book-content'>
+                    <img src={album.images[0]} />
+                    <img src={album.images[1]} />
+                    <img src={album.images[2]} />
+                    <img src={album.images[3]} />
+                    <div className='end'>
+                      L'anteprima finisce qui, sennò ti roviniamo la lettura! Ma
+                      se sei interessato, puoi acquistarlo!
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='60'
+                        height='60'
+                        fill='currentColor'
+                        className='bi bi-arrow-down-square'
+                        viewBox='0 0 16 16'>
+                        <path
+                          fillRule='evenodd'
+                          d='M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z'
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <div className='demoPage'>
-                  <img src={album.images[0]} />
+              </div>
+              <div className='capture'>
+                <Button
+                  type='button'
+                  variant='warning'
+                  className='buy'
+                  onClick={() => handleAddToCart(album)}>
+                  <p>Aggiungi al carrello</p>
+                </Button>
+                <div className='bio'>
+                  <h3>{album.title}</h3>
+                  <p>Autori: {album.author}</p>
+                  <p>Anno di uscita: {album.year}</p>
+                  <p className='album-price'>Prezzo: {album.price}€</p>
                 </div>
-                <div className='demoPage'>
-                  <img src={album.images[1]} />
-                </div>
-                <div className='demoPage'>
-                  <img src={album.images[2]} />
-                </div>
-                <div className='demoPage'>
-                  <img src={album.images[3]} />
-                </div>
-
-                <div className='end'>
-                  L'antemprima finisce qui, sennò ti roviniamo la lettura! Ma
-                  hey, leggi sotto!
-                </div>
-              </HTMLFlipBook>
-              <Button
-                variant='warning'
-                className='buy'>
-                <p>Aggiungi al carrello</p>
-              </Button>
-              <div className='bio'>
-                <p>Autori: {album.author}</p>
-                <p>Anno di uscita: {album.year}</p>
-                <p>Prezzo: {album.price}</p>
               </div>
             </Col>
           ))}
@@ -250,7 +145,7 @@ const DetailPage = () => {
             comments?.comm?.map((comment, index) => (
               <div
                 className='d-flex justify-content-center py-2'
-                key={comment.id}>
+                key={index}>
                 <div className='second py-2 px-2'>
                   <div className='d-flex justify-content-between py-1 pt-2'>
                     <div className='avatar'>
@@ -309,39 +204,17 @@ const DetailPage = () => {
         </div>
       </div>
 
-      <div className='text-center'>
-        {comicPage &&
-          comicPage?.card?.map((post, i) => (
-            <div key={nanoid()}>
-              <div className='descrizione'>
-                <h1>Chi è {post.title}?</h1>
-                <h2>{post.name}</h2>
-                {isEditing ? (
-                  <Form.Group controlId='formInformation'>
-                    <Form.Label>Informazioni</Form.Label>
-                    <Form.Control
-                      as='textarea'
-                      rows={3}
-                      value={editedData.information}
-                      onChange={e =>
-                        setEditedData({
-                          ...editedData,
-                          information: e.target.value,
-                        })
-                      }
-                    />
-                  </Form.Group>
-                ) : (
-                  <p>{post.information}</p>
-                )}
-              </div>
-            </div>
-          ))}
-      </div>
-
       <Footer />
     </>
   );
 };
 
-export default DetailPage;
+const DetailPageWrapper = () => {
+  return (
+    <DetailsProvider>
+      <DetailPage />
+    </DetailsProvider>
+  );
+};
+
+export default DetailPageWrapper;

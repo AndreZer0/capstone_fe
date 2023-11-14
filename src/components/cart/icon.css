@@ -1,0 +1,18 @@
+/** @format */
+.cart-counter {
+  background: red;
+  color: white;
+  border-radius: 50%;
+
+  width: 40px;
+  font-size: 1.4em;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding: auto;
+}
+
+.carrello {
+  cursor: pointer;
+}

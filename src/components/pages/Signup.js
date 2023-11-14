@@ -122,7 +122,6 @@ const Signup = () => {
               className='form-body-user'>
               <Form.Group
                 className='elementsForm'
-                as={Col}
                 controlId='firstName'>
                 <Form.Label className='input-title'>Nome</Form.Label>
                 <Form.Control
@@ -143,7 +142,6 @@ const Signup = () => {
 
               <Form.Group
                 className='elementsForm'
-                as={Col}
                 controlId='lastName'>
                 <Form.Label className='input-title'>Cognome</Form.Label>
                 <Form.Control
@@ -164,7 +162,6 @@ const Signup = () => {
 
               <Form.Group
                 className='elementsForm'
-                as={Col}
                 controlId='email'>
                 <Form.Label className='input-title'>Email</Form.Label>
                 <Form.Control
@@ -186,7 +183,6 @@ const Signup = () => {
 
               <Form.Group
                 className='elementsForm'
-                as={Col}
                 controlId='password'>
                 <Form.Label className='input-title'>Password</Form.Label>
                 <Form.Control

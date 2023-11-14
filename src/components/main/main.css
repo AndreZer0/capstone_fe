@@ -1,7 +1,4 @@
 /** @format */
-#root {
-  background-color: rgb(255, 255, 255);
-}
 
 .custom-card img {
   height: 300px;
@@ -78,6 +75,42 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.secret-container-2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.secret-container-2 .panel-1,
+.panel-2,
+.panel-3 {
+  width: 300px;
+  height: 400px;
+  margin: 2em;
+  background-color: #fff;
+  border: solid 2px #000;
+  box-shadow: 0 6px 6px -6px #000;
+  display: inline-block;
+  padding: 1em;
+  margin: 1vmin;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.panel-1 {
+  background-image: radial-gradient(circle, yellow, orange);
+}
+.panel-2 {
+  background-image: radial-gradient(circle, lightblue, deepskyblue);
+}
+.panel-3 {
+  background-image: radial-gradient(circle, lightcoral, tomato);
+}
+.secret-container-2 .panel-1 img,
+.panel-2 img,
+.panel-3 img {
+  height: 100%;
+}
 
 .secret {
   color: rgb(10, 1, 1);
@@ -100,22 +133,6 @@
 .custom-card:hover .secret-text {
   background-color: rgb(241, 178, 5);
   z-index: 3;
-}
-.secret-card {
-  background-image: url('https://i.pinimg.com/736x/b9/ec/42/b9ec428d63a6fdb5ecafd695f17ef6eb.jpg');
-  border: 2px solid black;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 2em;
-  font-weight: bold;
-  padding: 1em;
-  text-align: right;
-  color: #181a1a;
-  width: 300px;
-  height: 400px;
-  box-shadow: 0 1px 5px #00000099;
-  overflow: hidden;
-  position: relative;
 }
 
 .soon {
@@ -176,12 +193,25 @@
   font-size: 18px;
   letter-spacing: 2px;
 }
-
-.bottom-right {
-  bottom: -2px;
+.bottom-left {
+  left: -6px;
   position: absolute;
-  right: -6px;
+  bottom: -2px;
   transform: skew(-15deg);
+  color: black;
+  font-family: Bangers;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.bottom-right {
+  right: -6px;
+  position: absolute;
+  bottom: -2px;
+  transform: skew(-15deg);
+  color: black;
+  font-family: Bangers;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
 .speech {

@@ -5,10 +5,6 @@ import Main from '../main/Main';
 import MyNav from '../navigation/MyNav';
 import Footer from '../footer/Footer';
 
-import Jumbotron from '../jumbotron/Jumbotron';
-
-import { useSession } from '../../hooks/useSession';
-
 const Home = () => {
   return (
     <>

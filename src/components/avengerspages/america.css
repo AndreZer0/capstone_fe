@@ -91,7 +91,7 @@
   width: 60vh;
 }
 
-.libro {
+.libro-avenger {
   margin-bottom: 3em;
   display: flex;
   flex-direction: column;
@@ -248,7 +248,7 @@
     flex-direction: column; /* Visualizzazione a colonna */
     align-items: center; /* Allineamento al centro */
   }
-  .libro {
+  .libro-avenger {
     width: 100%; /* Occupa l'intera larghezza del contenitore */
     margin-bottom: 2em;
   }

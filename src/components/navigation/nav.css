@@ -24,3 +24,26 @@
 .me-auto a:hover {
   color: white;
 }
+
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.super-cart h3 {
+  color: #ff9900;
+  font-size: 2em;
+  font-family: Bangers;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  margin: auto;
+}
+
+@media (max-width: 800px) {
+  .welcome {
+    display: none;
+  }
+  .logout-container {
+    flex-direction: column;
+  }
+}

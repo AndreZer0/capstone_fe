@@ -79,7 +79,7 @@ const America = () => {
             </div>
             <button className='buy-button'>Acquista</button>
           </div>
-          <div className='libro'>
+          <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
                 <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />

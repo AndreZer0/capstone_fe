@@ -1,16 +1,18 @@
 /** @format */
 
 @media (max-width: 991px) {
+  .avengers,
   .jumbo {
     display: none !important;
   }
 }
 .avengers {
   text-align: center;
+  letter-spacing: 2px;
   font-family: 'Heroes Assemble Academy Italic', sans-serif;
-  color: red;
+  color: rgb(95, 93, 93);
   font-size: 4em;
-  background-color: white;
+  background-color: rgb(200, 188, 188);
   margin-left: 30%;
   margin-right: 30%;
   margin-top: 20px;
