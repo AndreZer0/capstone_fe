@@ -9,6 +9,7 @@ import {
   removeCart,
   emptyCart,
   addCart,
+  removeOneFromCart,
 } from '../../context/CartContext';
 import { nanoid } from '@reduxjs/toolkit';
 import { shippingCost } from '../../context/CartContext';
@@ -26,6 +27,7 @@ const Cart = () => {
   console.log(products);
   const handleRemove = productId => {
     dispatch(removeCart({ id: productId }));
+    toast.error('Prodotto rimosso con successo!');
   };
 
   const empty = () => {
@@ -37,7 +39,7 @@ const Cart = () => {
   };
 
   const handleDecreaseQuantity = productId => {
-    dispatch(removeCart({ id: productId }));
+    dispatch(removeOneFromCart({ id: productId }));
     toast.error('Prodotto rimosso con successo!');
   };
   const dynamicShippingCost =
@@ -75,7 +77,7 @@ const Cart = () => {
             </button>
           </li>
         ))}
-        <ToastContainer autoClose={3000} />
+        <ToastContainer />
       </ul>
 
       <p>Spese di spedizione: {dynamicShippingCost.toFixed(2)} €</p>

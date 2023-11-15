@@ -114,7 +114,9 @@ const MyNav = () => {
               <Cart onClose={handleCloseCart} />
             </Modal.Body>
           </Modal>
-          <Form className='d-flex'>{renderWelcomeMessageOrButtons()}</Form>
+          <Form className='d-flex justify-content-center'>
+            {renderWelcomeMessageOrButtons()}
+          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

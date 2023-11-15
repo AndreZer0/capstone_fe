@@ -102,12 +102,16 @@
   font-family: Bangers;
 }
 .end {
+  font-family: Bangers;
+  text-align: center;
   padding: 1em;
   color: rgb(255, 250, 250);
   font-size: 1.6em;
   background-color: #000000ea;
 }
-
+.end p {
+  font-size: 1.5em;
+}
 .end svg {
   color: white;
   display: block;
@@ -126,10 +130,11 @@
 }
 .bio {
   margin-top: 20px;
-  font-size: 2em;
+  font-size: 30px;
 }
-.bio h3 {
+.bio h2 {
   color: red;
+  font-size: 40px;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }

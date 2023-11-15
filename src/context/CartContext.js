@@ -88,7 +88,7 @@ const CartContext = createSlice({
       saveItems(state.totalItems);
     },
 
-    removeCart: (state, action) => {
+    removeOneFromCart: (state, action) => {
       const { id } = action.payload;
       const existingProductIndex = state.products.findIndex(
         product => product.id === id
@@ -119,6 +119,31 @@ const CartContext = createSlice({
         saveItems(state.totalItems);
       }
     },
+    removeCart: (state, action) => {
+      const { id } = action.payload;
+      const existingProductIndex = state.products.findIndex(
+        product => product.id === id
+      );
+
+      if (existingProductIndex !== -1) {
+        state.totalItems -= state.products[existingProductIndex].quantity;
+        state.totalAmount = calculateTotalAmount(state.products);
+
+        if (state.totalItems === 0) {
+          state.totalAmount = 0;
+        } else if (state.totalAmount < freeShippingThreshold) {
+          state.totalAmount += shippingCost;
+        }
+
+        state.totalAmount = state.totalAmount.toFixed(2);
+
+        state.products.splice(existingProductIndex, 1);
+
+        saveCart(state.products);
+        saveTotal(state.totalAmount);
+        saveItems(state.totalItems);
+      }
+    },
 
     emptyCart: state => {
       state.products = [];
@@ -131,7 +156,8 @@ const CartContext = createSlice({
   },
 });
 
-export const { addCart, removeCart, emptyCart } = CartContext.actions;
+export const { addCart, removeCart, emptyCart, removeOneFromCart } =
+  CartContext.actions;
 export const prodotti = state => state.cart.products;
 export const totaleProdotti = state => state.cart.totalItems;
 export const totalePrezzi = state => state.cart.totalAmount;

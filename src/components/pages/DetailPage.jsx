@@ -103,8 +103,10 @@ const DetailPage = () => {
                     <img src={album.images[2]} />
                     <img src={album.images[3]} />
                     <div className='end'>
-                      L'anteprima finisce qui, sennò ti roviniamo la lettura! Ma
-                      se sei interessato, puoi acquistarlo!
+                      <p>
+                        L'anteprima finisce qui, sennò ti roviniamo la lettura!
+                        Ma se sei interessato, puoi acquistarlo!
+                      </p>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         width='60'
@@ -130,7 +132,7 @@ const DetailPage = () => {
                   <p>Aggiungi al carrello</p>
                 </Button>
                 <div className='bio'>
-                  <h3>{album.title}</h3>
+                  <h2>{album.title}</h2>
                   <p>Autori: {album.author}</p>
                   <p>Anno di uscita: {album.year}</p>
                   <p className='album-price'>Prezzo: {album.price}€</p>
@@ -138,7 +140,7 @@ const DetailPage = () => {
               </div>
             </Col>
           ))}
-        <ToastContainer autoClose={3000} />
+        <ToastContainer />
       </div>
 
       <div className='comment-section'>
