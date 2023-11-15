@@ -12,10 +12,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 import MyNav from '../navigation/MyNav';
 import Footer from '../footer/Footer';
 import { useSession } from '../../hooks/useSession';
-
+import { ToastContainer, toast } from 'react-toastify';
 import { addCart, prodotti } from '../../context/CartContext';
 import { useDispatch, useSelector } from 'react-redux';
-
+import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 import './details.css';
 
 const DetailPage = () => {
@@ -54,6 +55,7 @@ const DetailPage = () => {
         cover: album.cover,
       })
     );
+    toast.success('Prodotto aggiunto con successo!');
   };
 
   useEffect(() => {
@@ -136,6 +138,7 @@ const DetailPage = () => {
               </div>
             </Col>
           ))}
+        <ToastContainer autoClose={3000} />
       </div>
 
       <div className='comment-section'>

@@ -3,9 +3,12 @@
 .main {
   display: flex;
   justify-content: center;
-  background-color: #d9d9d9;
-
-  margin: 2em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/08/19/Comic-break-brick-wall-Graphics-5026333-2-580x387.jpg');
+  margin: 4em;
+  margin-bottom: 0;
 }
 
 .book {
@@ -123,7 +126,7 @@
 }
 .bio {
   margin-top: 20px;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 .bio h3 {
   color: red;

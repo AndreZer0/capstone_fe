@@ -5,30 +5,29 @@ import MyNav from '../navigation/MyNav';
 import './america.css';
 import Footer from '../footer/Footer';
 
-const America = () => {
+const Vedova = () => {
   return (
     <>
       <MyNav />
-      <div className='america'>
+      <div className='widow'>
         <section class='articles'>
           <article className='avengers'>
             <div class='article-wrapper'>
               <div className='bio-pic'>
                 <img
-                  src='https://imgix.ranker.com/list_img_v2/4961/2464961/original/brutal-captain-america-moments?w=817&h=427&fm=jpg&q=50&fit=crop'
+                  src='https://sugargamers.com/wp-content/uploads/2021/12/Black-Widow-Marvel-Comic.jpeg'
                   alt=''
                 />
               </div>
               <div class='article-body'>
-                <h2>Steve Rogers</h2>
-                <h1>Captain America</h1>
+                <h2>Natasha Romanoff</h2>
+                <h1>Black Widow</h1>
                 <p>
-                  Steve Rogers è considerato l'apice del potenziale umano e
-                  opera al massimo delle prestazioni fisiche, sensoriali e
-                  mentali grazie al suo potenziamento tramite il siero del
-                  supersoldato.Il siero ha notevolmente migliorato il suo corpo
-                  fragile e gli ha dato una resistenza di gran lunga superiore a
-                  quella media di un essere umano.
+                  Natasha Romanoff è originariamente una spia russa addestrata
+                  nella Sala Rossa, un'organizzazione segreta specializzata
+                  nell'allenamento di assassini. Inizialmente, la Vedova Nera
+                  lavora come agente doppiogiochista, ma successivamente si
+                  unisce agli Avengers diventando un membro chiave del team.
                 </p>
               </div>
             </div>
@@ -37,19 +36,18 @@ const America = () => {
             <div class='article-wrapper'>
               <div className='bio-pic'>
                 <img
-                  src='https://i.postimg.cc/1zxmXs7p/scudo.jpg'
+                  src='https://i.postimg.cc/yN9WhBfT/vedova.png'
                   alt=''
                 />
               </div>
               <div class='article-body'>
                 <h2>Arma</h2>
-                <h1>Scudo di vibranio</h1>
+                <h1>Versatilità</h1>
                 <p>
-                  Lo scudo è il principale strumento difensivo ed offensivo del
-                  supereroe Capitan America, raramente visto senza di esso.
-                  Realizzato in vibranio dallo scienziato Myron MacLain, questo
-                  scudo è virtualmente indistruttibile ed è diventato l'icona
-                  del supereroe.
+                  Esperta nelle arti marziali e atleticamente sovrumana grazie a
+                  un siero di super soldato, Natasha è una maestra nell'uso di
+                  armi da fuoco, armi bianche e tecnologie avanzate, nonchè
+                  formidabile hacker e spia.
                 </p>
               </div>
             </div>
@@ -66,7 +64,7 @@ const America = () => {
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://jimsterankographicprinceofdarkness.files.wordpress.com/2015/05/captain-america-113.jpg' />
+                <img src='https://cdn.vox-cdn.com/thumbor/emZZZCgceecK1luBEblpGaKeVUQ=/0x0:1349x2048/1200x0/filters:focal(0x0:1349x2048):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22705949/IMG_42764A3A0C0B_1.jpeg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -75,14 +73,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://jimsterankographicprinceofdarkness.files.wordpress.com/2015/05/captain-america-113.jpg' />
+                <img src='https://cdn.vox-cdn.com/thumbor/emZZZCgceecK1luBEblpGaKeVUQ=/0x0:1349x2048/1200x0/filters:focal(0x0:1349x2048):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22705949/IMG_42764A3A0C0B_1.jpeg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />
+                <img src='https://mycomics.it/wp-content/uploads/sites/16/2022/06/FUMBLAWID0007.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -91,14 +89,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />
+                <img src='https://mycomics.it/wp-content/uploads/sites/16/2022/06/FUMBLAWID0007.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/51K4CX8zINL.jpg' />
+                <img src='https://images.squarespace-cdn.com/content/v1/58c35f74d1758e424ee76710/1578345626448-BHURWZYC3GNR1XR43EM9/WEBOFBWIDOW2019005_ReviewCopy+%28dragged%29+copy.jpg?format=1000w' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -107,14 +105,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/51K4CX8zINL.jpg' />
+                <img src='https://storage.googleapis.com/hipcomic/p/73e401e6c17a39dfe00b9a0058d252b0-800.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/c/20/59a5b0e5c9b0c/clean.jpg' />
+                <img src='https://m.media-amazon.com/images/I/51ouquL+ElL._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -123,14 +121,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/c/20/59a5b0e5c9b0c/clean.jpg' />
+                <img src='https://m.media-amazon.com/images/I/51ouquL+ElL._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/71gBV2mEKRL._AC_UF1000,1000_QL80_.jpg' />
+                <img src='https://m.media-amazon.com/images/I/71gnubkjDaL._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -139,14 +137,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/71gBV2mEKRL._AC_UF1000,1000_QL80_.jpg' />
+                <img src='https://m.media-amazon.com/images/I/71gnubkjDaL._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/51-VTW6IksL.jpg' />
+                <img src='https://m.media-amazon.com/images/I/51CpODDLImL.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -155,7 +153,7 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/51-VTW6IksL.jpg' />
+                <img src='https://m.media-amazon.com/images/I/51CpODDLImL.jpg' />
               </div>
             </div>
           </div>
@@ -166,4 +164,4 @@ const America = () => {
   );
 };
 
-export default America;
+export default Vedova;

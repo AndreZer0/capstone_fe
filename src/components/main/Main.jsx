@@ -96,13 +96,6 @@ const Main = () => {
             </Link>
           </div>
         ))}
-        <div className='panel'>
-          <p className='text top-left'>Try resizing...</p>
-          <p className='text bottom-right'>...it's responsive</p>
-        </div>
-        <div className='panel'>
-          <p className='speech'>A speech bubble</p>
-        </div>
       </article>
       <h3
         className='soon'

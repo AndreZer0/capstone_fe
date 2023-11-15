@@ -5,30 +5,32 @@ import MyNav from '../navigation/MyNav';
 import './america.css';
 import Footer from '../footer/Footer';
 
-const America = () => {
+const Thor = () => {
   return (
     <>
       <MyNav />
-      <div className='america'>
+      <div className='thor'>
         <section class='articles'>
           <article className='avengers'>
             <div class='article-wrapper'>
               <div className='bio-pic'>
                 <img
-                  src='https://imgix.ranker.com/list_img_v2/4961/2464961/original/brutal-captain-america-moments?w=817&h=427&fm=jpg&q=50&fit=crop'
+                  src='https://imgix.ranker.com/list_img_v2/7409/2647409/original/best-thor-comics-storylines-u2?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720'
                   alt=''
                 />
               </div>
               <div class='article-body'>
-                <h2>Steve Rogers</h2>
-                <h1>Captain America</h1>
+                <h2>Thor Odinson</h2>
+                <h1>Thor</h1>
                 <p>
-                  Steve Rogers è considerato l'apice del potenziale umano e
-                  opera al massimo delle prestazioni fisiche, sensoriali e
-                  mentali grazie al suo potenziamento tramite il siero del
-                  supersoldato.Il siero ha notevolmente migliorato il suo corpo
-                  fragile e gli ha dato una resistenza di gran lunga superiore a
-                  quella media di un essere umano.
+                  Ispirato all'omonima divinità della mitologia norrena, Thor,
+                  noto come il Dio del Tuono (God of Thunder) o Il Tonante (The
+                  Thunderer), è l'erede al trono di Asgard, figlio di Odino e di
+                  Gea. Grazie ai poteri derivatigli dal suo doppio retaggio e
+                  dal martello incantato Mjolnir, Thor è uno dei più forti e più
+                  importanti protettori di entrambi i mondi, un supereroe membro
+                  fondatore dei Vendicatori e uno degli esseri più potenti
+                  dell'Universo Marvel.
                 </p>
               </div>
             </div>
@@ -37,19 +39,21 @@ const America = () => {
             <div class='article-wrapper'>
               <div className='bio-pic'>
                 <img
-                  src='https://i.postimg.cc/1zxmXs7p/scudo.jpg'
+                  src='https://sportshub.cbsistatic.com/i/2021/03/18/0025547d-9d0e-43ea-8613-61ac6d71fe52/thor-7-hammer-changes-mjolnir-powers-marvel-comics-spoilersjpg-1237231.jpg'
                   alt=''
                 />
               </div>
               <div class='article-body'>
                 <h2>Arma</h2>
-                <h1>Scudo di vibranio</h1>
+                <h1>Mjolnir</h1>
                 <p>
-                  Lo scudo è il principale strumento difensivo ed offensivo del
-                  supereroe Capitan America, raramente visto senza di esso.
-                  Realizzato in vibranio dallo scienziato Myron MacLain, questo
-                  scudo è virtualmente indistruttibile ed è diventato l'icona
-                  del supereroe.
+                  Un grosso martello da guerra a forma di parallelepipedo
+                  rettangolo grigio con l'impugnatura corta, avvolta in lacci di
+                  cuoio marrone e culminante in un cordino circolare. Oltre a
+                  conferire immensi poteri a chi lo impugna, Mjolnir è
+                  virtualmente indistruttibile, può venire brandito solo da
+                  coloro che ne sono ritenuti degni ed è in grado di tornare
+                  sempre in mano del suo possessore.
                 </p>
               </div>
             </div>
@@ -66,7 +70,7 @@ const America = () => {
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://jimsterankographicprinceofdarkness.files.wordpress.com/2015/05/captain-america-113.jpg' />
+                <img src='https://s3.amazonaws.com/comicgeeks/comics/covers/large-3982174.jpg?1699579703' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -75,14 +79,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://jimsterankographicprinceofdarkness.files.wordpress.com/2015/05/captain-america-113.jpg' />
+                <img src='https://s3.amazonaws.com/comicgeeks/comics/covers/large-3982174.jpg?1699579703' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />
+                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/9/60/64e3b7fb32a93/clean.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -91,14 +95,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />
+                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/9/60/64e3b7fb32a93/clean.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/51K4CX8zINL.jpg' />
+                <img src='https://storage.googleapis.com/hipcomic/p/73e401e6c17a39dfe00b9a0058d252b0-800.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -107,14 +111,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/51K4CX8zINL.jpg' />
+                <img src='https://storage.googleapis.com/hipcomic/p/73e401e6c17a39dfe00b9a0058d252b0-800.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/c/20/59a5b0e5c9b0c/clean.jpg' />
+                <img src='https://storage.googleapis.com/hipcomic/p/46313a02eeebf442e4783f88e851bd69-800.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -123,14 +127,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/c/20/59a5b0e5c9b0c/clean.jpg' />
+                <img src='https://storage.googleapis.com/hipcomic/p/46313a02eeebf442e4783f88e851bd69-800.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/71gBV2mEKRL._AC_UF1000,1000_QL80_.jpg' />
+                <img src='https://i.ebayimg.com/images/g/MsQAAOSw9ctgzsTc/s-l1200.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -139,14 +143,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/71gBV2mEKRL._AC_UF1000,1000_QL80_.jpg' />
+                <img src='https://i.ebayimg.com/images/g/MsQAAOSw9ctgzsTc/s-l1200.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/51-VTW6IksL.jpg' />
+                <img src='https://www.comicsbox.it/cover/THORVE_M_281.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -155,7 +159,7 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/51-VTW6IksL.jpg' />
+                <img src='https://www.comicsbox.it/cover/THORVE_M_281.jpg' />
               </div>
             </div>
           </div>
@@ -166,4 +170,4 @@ const America = () => {
   );
 };
 
-export default America;
+export default Thor;

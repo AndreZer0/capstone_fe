@@ -5,30 +5,30 @@ import MyNav from '../navigation/MyNav';
 import './america.css';
 import Footer from '../footer/Footer';
 
-const America = () => {
+const Falco = () => {
   return (
     <>
       <MyNav />
-      <div className='america'>
-        <section class='articles'>
+      <div className='falco'>
+        <section className='articles'>
           <article className='avengers'>
             <div class='article-wrapper'>
               <div className='bio-pic'>
                 <img
-                  src='https://imgix.ranker.com/list_img_v2/4961/2464961/original/brutal-captain-america-moments?w=817&h=427&fm=jpg&q=50&fit=crop'
+                  src='https://www.comicbookherald.com/wp-content/uploads/2017/02/hawkeye-and-thunderbolts-comic-cover-e1487815959253.jpg'
                   alt=''
                 />
               </div>
               <div class='article-body'>
-                <h2>Steve Rogers</h2>
-                <h1>Captain America</h1>
+                <h2>Clint Barton</h2>
+                <h1>Hawkeye</h1>
                 <p>
-                  Steve Rogers è considerato l'apice del potenziale umano e
-                  opera al massimo delle prestazioni fisiche, sensoriali e
-                  mentali grazie al suo potenziamento tramite il siero del
-                  supersoldato.Il siero ha notevolmente migliorato il suo corpo
-                  fragile e gli ha dato una resistenza di gran lunga superiore a
-                  quella media di un essere umano.
+                  Cresciuto in un circo, Barton sviluppa abilità straordinarie
+                  nell'uso dell'arco e delle frecce. Dopo un periodo da
+                  criminale, viene ispirato dal supereroe Occhio di Falco
+                  (Hawkeye) e decide di mettere le sue abilità al servizio del
+                  bene. Diventa un membro chiave degli Avengers, contribuendo
+                  con la sua precisione unica e abilità di tiratore scelto.
                 </p>
               </div>
             </div>
@@ -37,19 +37,18 @@ const America = () => {
             <div class='article-wrapper'>
               <div className='bio-pic'>
                 <img
-                  src='https://i.postimg.cc/1zxmXs7p/scudo.jpg'
+                  src='https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/03/hawkeye-freefall-header-1.jpg'
                   alt=''
                 />
               </div>
               <div class='article-body'>
                 <h2>Arma</h2>
-                <h1>Scudo di vibranio</h1>
+                <h1>Arco e frecce</h1>
                 <p>
-                  Lo scudo è il principale strumento difensivo ed offensivo del
-                  supereroe Capitan America, raramente visto senza di esso.
-                  Realizzato in vibranio dallo scienziato Myron MacLain, questo
-                  scudo è virtualmente indistruttibile ed è diventato l'icona
-                  del supereroe.
+                  Esperto tiratore, combina precisione straordinaria con abilità
+                  nelle arti marziali e tattiche strategiche. Le sue frecce
+                  speciali, equipaggiate con tecnologie avanzate, gli
+                  conferiscono versatilità in battaglia.
                 </p>
               </div>
             </div>
@@ -66,7 +65,7 @@ const America = () => {
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://jimsterankographicprinceofdarkness.files.wordpress.com/2015/05/captain-america-113.jpg' />
+                <img src='https://m.media-amazon.com/images/I/81QFkDwe3XL._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -75,14 +74,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://jimsterankographicprinceofdarkness.files.wordpress.com/2015/05/captain-america-113.jpg' />
+                <img src='https://m.media-amazon.com/images/I/81QFkDwe3XL._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />
+                <img src='https://m.media-amazon.com/images/I/61EljEP9bHL._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -91,14 +90,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://i.postimg.cc/0QnRzg3L/2993116-captainamerica109.jpg' />
+                <img src='https://m.media-amazon.com/images/I/61EljEP9bHL._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/51K4CX8zINL.jpg' />
+                <img src='https://m.media-amazon.com/images/I/81RqB4GHziL._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -107,14 +106,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/51K4CX8zINL.jpg' />
+                <img src='https://m.media-amazon.com/images/I/81RqB4GHziL._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/c/20/59a5b0e5c9b0c/clean.jpg' />
+                <img src='https://m.media-amazon.com/images/I/51WDMBD7qNL.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -123,14 +122,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://cdn.marvel.com/u/prod/marvel/i/mg/c/20/59a5b0e5c9b0c/clean.jpg' />
+                <img src='https://m.media-amazon.com/images/I/51WDMBD7qNL.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/71gBV2mEKRL._AC_UF1000,1000_QL80_.jpg' />
+                <img src='https://m.media-amazon.com/images/I/61+mvRB86MS._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -139,14 +138,14 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/71gBV2mEKRL._AC_UF1000,1000_QL80_.jpg' />
+                <img src='https://m.media-amazon.com/images/I/61+mvRB86MS._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
           <div className='libro-avenger'>
             <div className='inner-book'>
               <div className='img'>
-                <img src='https://m.media-amazon.com/images/I/51-VTW6IksL.jpg' />
+                <img src='https://m.media-amazon.com/images/I/71oO97U9XQL._AC_UF1000,1000_QL80_.jpg' />
                 <div className='sold-out-banner'>SOLD OUT</div>
               </div>
               <div className='page'></div>
@@ -155,7 +154,7 @@ const America = () => {
               <div className='page page-4'></div>
               <div className='page page-5'></div>
               <div className='img final-page'>
-                <img src='https://m.media-amazon.com/images/I/51-VTW6IksL.jpg' />
+                <img src='https://m.media-amazon.com/images/I/71oO97U9XQL._AC_UF1000,1000_QL80_.jpg' />
               </div>
             </div>
           </div>
@@ -166,4 +165,4 @@ const America = () => {
   );
 };
 
-export default America;
+export default Falco;

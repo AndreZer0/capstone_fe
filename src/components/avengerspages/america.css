@@ -1,79 +1,106 @@
 /** @format */
-
 .america {
-  background-color: #f1a821;
+  background-color: rgb(100, 159, 252);
+  height: 100%;
 }
-.flex {
+.falco {
+  background-color: rgb(164, 114, 233);
+  height: 100%;
+}
+.stark {
+  background-color: #fcd33f;
+  height: 100%;
+}
+.hulk {
+  background-color: rgb(52, 149, 57);
+  height: 100%;
+}
+.thor {
+  background-color: rgb(144, 144, 144);
+  height: 100%;
+}
+.widow {
+  background-color: rgb(183, 0, 0);
+  height: 100%;
+}
+.avengers {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  width: 400px;
+  margin: 20px;
+}
+
+.avengers h1 {
+  margin: 0 0 18px 0;
+
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+.bio-pic {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.avengers img {
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 24px;
+}
+
+.avengers:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.articles {
   display: flex;
   justify-content: space-around;
-}
-.wrapper {
-  height: 500px;
-  width: 654px;
-  margin: 20px;
-  border-radius: 7px 7px 7px 7px;
-
-  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  padding: 50px;
 }
 
-.product-img {
-  float: left;
-  height: 500px;
-  width: 327px;
+@media screen and (max-width: 960px) {
+  .article-body p {
+    display: none;
+  }
+  .avengers {
+    width: 350px;
+  }
+  .articles {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.product-img img {
-  border-radius: 7px 0 0 7px;
-  height: 500px;
-}
-
-.product-info {
-  float: left;
-  height: 500px;
-  width: 327px;
-  border-radius: 0 7px 10px 7px;
-  background-color: #ffffff;
-}
-
-.product-text {
-  height: 300px;
-  width: 327px;
-}
-
-.product-text h1 {
-  margin: 0 0 0 30px;
-  padding-top: 52px;
-  font-size: 40px;
-  color: #474747;
-}
-
-.product-text h1,
-.product-price-btn p {
-  font-family: 'Bentham', serif;
-}
-
-.product-text h2 {
-  margin: 0 0 47px 38px;
-  font-size: 13px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #d2d2d2;
-  letter-spacing: 0.2em;
-}
-
-.product-text p {
-  height: 400px;
-  margin: 6px;
-  font-family: 'Playfair Display', serif;
-  color: #8d8d8d;
-  line-height: 1.5em;
-  font-size: 16px;
-  font-weight: lighter;
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
   overflow: hidden;
-  padding: 2px;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .shelf {
@@ -145,6 +172,9 @@
   position: absolute;
   top: 0;
 }
+.img img {
+  filter: grayscale(80%);
+}
 
 .inner-book .img:before {
   content: '';
@@ -196,6 +226,21 @@
   right: -15px;
   z-index: 0;
 }
+.sold-out-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e10c0c;
+  color: #fff;
+  padding: 20px;
+  font-weight: bold;
+  font-family: Bangers;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  z-index: 1;
+}
 
 .img.final-page {
   position: absolute;
@@ -203,56 +248,31 @@
   right: -17px;
   transform: rotateY(-19deg) translateZ(-10px) scale(0.984);
 }
-
-.buy-button {
-  display: block;
-  margin-top: 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.3s;
-
-  :hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-}
-
-.price {
-  font-size: bold;
-  font-size: 30px;
-  margin-top: 20px;
-  background-color: #fc4343;
-  color: #fff;
-  border-radius: 5px;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.comic-title {
+.sorry {
   font-family: Bangers;
-  margin-top: 20px;
-  background-color: white;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 5px;
+  text-align: center;
+  margin: 20px;
 }
-
+.sorry h3 {
+  font-size: 45px;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
 @media (max-width: 1100px) {
   .america {
-    flex-direction: column; /* Visualizzazione a colonna */
-    align-items: center; /* Allineamento al centro */
+    flex-direction: column;
+    align-items: center;
   }
+  .div-flex {
+    flex-direction: column;
+  }
+
   .libro-avenger {
-    width: 100%; /* Occupa l'intera larghezza del contenitore */
+    width: 100%;
     margin-bottom: 2em;
   }
-  .flex {
+  .wrapper-av {
     flex-direction: column;
   }
 }

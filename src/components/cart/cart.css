@@ -34,8 +34,22 @@
 
   align-items: center;
 }
+.quantity-button {
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
 
-.cart li button {
+.quantity-button:hover {
+  background-color: #45a049;
+}
+
+.remove {
   background-color: #ff9900;
   width: 100px;
   color: #fff;
@@ -88,6 +102,7 @@
   height: 150px;
   width: 100px;
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
