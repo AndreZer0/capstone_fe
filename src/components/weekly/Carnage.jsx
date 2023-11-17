@@ -16,7 +16,7 @@ const Carnage = () => {
                 <h2>Cletus Cortland Kasady</h2>
               </div>
               <div className='grouptext'>
-                <h3>ALTER EGO</h3>
+                <h3>ALTER EGO:</h3>
                 <h2>Carnage</h2>
               </div>
               <div className='grouptext'>

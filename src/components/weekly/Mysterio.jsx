@@ -17,7 +17,7 @@ const Mysterio = () => {
                 <h2>Quentin Beck</h2>
               </div>
               <div className='grouptext'>
-                <h3>ALTER EGO</h3>
+                <h3>ALTER EGO:</h3>
                 <h2>Mysterio</h2>
               </div>
               <div className='grouptext'>
