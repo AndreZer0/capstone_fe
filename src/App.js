@@ -28,16 +28,16 @@ const App = () => {
           path='/'
           element={<Home />}
         />
+        <Route
+          path='/checkout-success'
+          element={<CheckoutSuccess />}
+        />
         <Route element={<ProtectedRoutes />}>
           <Route
             path='/comic/:comicId'
             element={<DetailPage />}
           />
 
-          <Route
-            path='/checkout-success'
-            element={<CheckoutSuccess />}
-          />
           <Route
             path='/america'
             element={<America />}
