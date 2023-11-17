@@ -36,7 +36,7 @@ const Mysterio = () => {
 
           <div className='productSpecifications'>
             <img
-              width={330}
+              width={250}
               height={120}
               className='logo-mysterio'
               src='https://i.postimg.cc/6pXLb9BW/mysterio-logo.png'

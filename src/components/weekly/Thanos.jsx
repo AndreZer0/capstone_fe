@@ -36,7 +36,7 @@ const Thanos = () => {
 
           <div className='productSpecifications'>
             <img
-              width={330}
+              width={250}
               height={120}
               className='logo-thanos'
               src='https://i.postimg.cc/Hnyr07Kp/thanos-logo.webp'

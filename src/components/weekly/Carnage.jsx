@@ -35,6 +35,8 @@ const Carnage = () => {
 
           <div className='productSpecifications'>
             <img
+              width={250}
+              height={120}
               className='logo-carnage'
               src='https://i.postimg.cc/15pJ7K3k/carnage-logo.webp'
             />

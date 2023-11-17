@@ -61,6 +61,10 @@ const DetailPage = () => {
 
   useEffect(() => {
     getComicsByCardId(comicId);
+    window.scrollTo({
+      top: 0,
+      behavior: 'instant',
+    });
     getComments();
   }, [comicId]);
 
