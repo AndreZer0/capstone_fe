@@ -34,8 +34,7 @@ const MyNav = () => {
   const empty = () => {
     dispatch(emptyCart());
   };
-  const logout = e => {
-    e.preventDefault();
+  const logout = () => {
     const confirmLogout = window.confirm('Sei sicuro di voler uscire?');
 
     if (confirmLogout) {
@@ -54,9 +53,9 @@ const MyNav = () => {
             <h4 className='welcome mx-3'>Benvenuto, {session.firstName}</h4>
 
             <Button
-              className='click-logout bg-danger mx-3'
+              className='bg-danger mx-3'
               variant='outline-light'
-              onClick={e => logout(e)}>
+              onClick={() => logout()}>
               Logout
             </Button>
           </div>

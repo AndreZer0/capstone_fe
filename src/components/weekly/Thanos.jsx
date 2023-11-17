@@ -22,7 +22,7 @@ const Thanos = () => {
               </div>
               <div className='grouptext'>
                 <h3>RAZZA:</h3>
-                <h2>Titano</h2>
+                <h2>Eterno</h2>
               </div>
 
               <div className='productImage'>
