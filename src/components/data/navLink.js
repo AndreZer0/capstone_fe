@@ -25,7 +25,7 @@ const NavLinks = () => {
       </Nav.Link>
       <Nav.Link
         className='redirect'
-        href='#secret-container'
+        href='#coming-soon'
         style={linkStyle}>
         Coming soon
       </Nav.Link>

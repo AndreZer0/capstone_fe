@@ -1,13 +1,18 @@
 /** @format */
+.libro-dettaglio {
+  background-image: url('https://i.postimg.cc/fRvghMjK/photo-2023-11-16-19-49-42.jpg');
+  display: flex;
+  flex-direction: column;
+}
 
 .main {
   display: flex;
   justify-content: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/08/19/Comic-break-brick-wall-Graphics-5026333-2-580x387.jpg');
-  margin: 4em;
+  background-image: radial-gradient(circle, yellow, orange);
+  margin: 60px;
+
+  padding: auto;
+  border-radius: 25px;
   margin-bottom: 0;
 }
 
@@ -148,6 +153,7 @@
   .book > div {
     width: 60vw;
     height: 400px;
+    margin-right: -20px;
   }
 }
 .comments {

@@ -6,7 +6,9 @@ import {
   DetailsProvider,
 } from '../../context/DetailsContext';
 
-import { Button, Col, Row, Container } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import { Modal } from 'react-bootstrap';
+import { Button, Col } from 'react-bootstrap';
 import { nanoid } from 'nanoid';
 import { useParams, useNavigate } from 'react-router-dom';
 import MyNav from '../navigation/MyNav';
@@ -24,7 +26,7 @@ const DetailPage = () => {
     comicPage,
 
     comments,
-
+    addComics,
     newComment,
     getComicsByCardId,
     getComments,
@@ -38,13 +40,12 @@ const DetailPage = () => {
   const session = useSession();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const { comicId } = useParams();
   const products = useSelector(prodotti);
-
-  const handleEditClick = () => {
-    navigate(`/modify/${comicId}`);
-  };
 
   const handleAddToCart = album => {
     dispatch(
@@ -71,20 +72,9 @@ const DetailPage = () => {
         <>
           <div className='mod-buttons'>
             <h3 className='welcome-admin'>
-              Benvenuto {session.firstName}, scegli se modificare la tua card o
-              eliminarla del tutto
+              Benvenuto {session.firstName}, presto da qui potrai gestire le
+              modifiche e l'aggiunta di nuovi fumetti
             </h3>
-            <Button
-              className='modify'
-              variant='success'
-              onClick={handleEditClick}>
-              <p> Vai alla pagina di modifica</p>
-            </Button>
-            <Button
-              className='delete'
-              variant='danger'>
-              <p>Elimina</p>
-            </Button>
           </div>
         </>
       )}
@@ -93,11 +83,11 @@ const DetailPage = () => {
           comicPage?.comics?.map((album, i) => (
             <Col key={nanoid()}>
               <div className='main'>
-                <div class='book'>
-                  <div class='book-cover'>
+                <div className='book'>
+                  <div className='book-cover'>
                     <img src={album.cover} />
                   </div>
-                  <div class='book-content'>
+                  <div className='book-content'>
                     <img src={album.images[0]} />
                     <img src={album.images[1]} />
                     <img src={album.images[2]} />

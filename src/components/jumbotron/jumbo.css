@@ -1,8 +1,11 @@
 /** @format */
 
-@media (max-width: 991px) {
+@media screen and (min-width: 768px) {
+  .jumbo > div:hover {
+    flex-basis: 250px;
+  }
   .jumbo {
-    display: none !important;
+    height: 400px;
   }
 }
 
@@ -10,12 +13,14 @@
   text-decoration: none;
 }
 .jumbo {
-  margin-top: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 400px;
+
   gap: 10px;
+  flex-wrap: wrap;
 
   > div {
     border: 2px solid white;
@@ -81,7 +86,6 @@
     }
 
     &:hover {
-      flex: 0 0 250px;
       box-shadow: 1px 3px 15px #f9cc02;
       transform: translatey(-30px);
     }

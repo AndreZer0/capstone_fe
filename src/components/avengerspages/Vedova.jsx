@@ -10,16 +10,16 @@ const Vedova = () => {
     <>
       <MyNav />
       <div className='widow'>
-        <section class='articles'>
+        <section className='articles'>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://sugargamers.com/wp-content/uploads/2021/12/Black-Widow-Marvel-Comic.jpeg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Natasha Romanoff</h2>
                 <h1>Black Widow</h1>
                 <p>
@@ -33,14 +33,14 @@ const Vedova = () => {
             </div>
           </article>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://i.postimg.cc/yN9WhBfT/vedova.png'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Arma</h2>
                 <h1>Versatilità</h1>
                 <p>

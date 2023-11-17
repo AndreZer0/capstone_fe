@@ -10,16 +10,16 @@ const Hulk = () => {
     <>
       <MyNav />
       <div className='hulk'>
-        <section class='articles'>
+        <section className='articles'>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://cdn.mos.cms.futurecdn.net/ggoUJ4fSQPZLHbBGHLj8F6-1200-80.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Bruce Banner</h2>
                 <h1>Hulk</h1>
                 <p>
@@ -34,14 +34,14 @@ const Hulk = () => {
             </div>
           </article>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://static1.srcdn.com/wordpress/wp-content/uploads/2022/04/Hulk-Punch.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Arma</h2>
                 <h1>Pugni</h1>
                 <p>I suoi pugni.</p>

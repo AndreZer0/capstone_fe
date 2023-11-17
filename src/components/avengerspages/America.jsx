@@ -10,16 +10,16 @@ const America = () => {
     <>
       <MyNav />
       <div className='america'>
-        <section class='articles'>
+        <section className='articles'>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://imgix.ranker.com/list_img_v2/4961/2464961/original/brutal-captain-america-moments?w=817&h=427&fm=jpg&q=50&fit=crop'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Steve Rogers</h2>
                 <h1>Captain America</h1>
                 <p>
@@ -34,14 +34,14 @@ const America = () => {
             </div>
           </article>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://i.postimg.cc/1zxmXs7p/scudo.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Arma</h2>
                 <h1>Scudo di vibranio</h1>
                 <p>

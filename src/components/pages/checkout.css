@@ -2,22 +2,24 @@
 
 .done {
   color: white;
-  font-size: 3em;
+  font-size: 40px;
   margin: 2rem 0 0.25rem 0;
+
   -webkit-text-stroke-width: 2px;
+
   -webkit-text-stroke-color: black;
 }
 
 .thanks {
   color: white;
-  font-size: 3em;
+  font-size: 40px;
   margin: 0;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 .back-home {
   color: rgb(255, 255, 255);
-  font-size: 2.5em;
+  font-size: 40px;
   margin-top: 30px;
   -webkit-text-stroke-width: 1.7px;
   -webkit-text-stroke-color: black;
@@ -66,14 +68,17 @@ figure:after {
 .image-container {
   flex: 1;
 }
+
 .image-container img {
   height: 300px;
   width: 300px;
 }
+
 .text-container {
   font-family: Bangers;
   flex: 2;
   text-align: center;
+  font-size: 2em;
 }
 
 article {
@@ -89,7 +94,7 @@ article:hover {
   height: 70px;
   border: none;
   border-radius: 50px;
-  font-size: 2em;
+
   background-color: rgb(252, 2, 2);
   color: white;
 }
@@ -102,4 +107,30 @@ article:hover {
   background-image: url('https://img.freepik.com/premium-photo/19aug19_670672-261.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1200px) {
+  figure {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  figure {
+    width: 100%;
+  }
+
+  .image-container img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .text-container {
+    font-size: 30px;
+  }
+
+  .homepage {
+    width: 150px;
+    height: 50px;
+  }
 }

@@ -9,10 +9,8 @@
 }
 
 .custom-card {
-  background-image: url('https://i.pinimg.com/736x/b9/ec/42/b9ec428d63a6fdb5ecafd695f17ef6eb.jpg');
   border: 2px solid black;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   margin: 2em;
   font-weight: bold;
   padding: 1em;
@@ -25,16 +23,6 @@
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-}
-
-.custom-card::before {
-  content: '';
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(255, 243, 243, 0.765);
 }
 
 .custom-card:hover {
@@ -141,6 +129,15 @@
   text-align: center;
   font-family: 'Bangers';
   font-size: 4em;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+.avengers-title {
+  font-size: 5em;
+
+  color: rgb(255, 191, 0);
+  text-align: center;
+  font-family: 'Bangers';
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
     2px 2px 0 #000;
 }
@@ -306,7 +303,7 @@
   flex-basis: 200px;
 }
 .panel:nth-child(19) {
-  flex-basis: 300px;
+  flex-basis: 400px;
 }
 .panel:nth-child(20) {
   flex-basis: 300px;
@@ -326,5 +323,17 @@
 }
 
 .panel:nth-child(4n + 4) {
+  background-image: radial-gradient(circle, lightcoral, tomato);
+}
+
+.tre {
+  background-image: radial-gradient(circle, lightblue, deepskyblue);
+}
+
+.due {
+  background-image: radial-gradient(circle, palegreen, yellowgreen);
+}
+
+.uno {
   background-image: radial-gradient(circle, lightcoral, tomato);
 }

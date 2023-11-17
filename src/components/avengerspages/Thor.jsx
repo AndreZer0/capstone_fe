@@ -10,16 +10,16 @@ const Thor = () => {
     <>
       <MyNav />
       <div className='thor'>
-        <section class='articles'>
+        <section className='articles'>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://imgix.ranker.com/list_img_v2/7409/2647409/original/best-thor-comics-storylines-u2?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Thor Odinson</h2>
                 <h1>Thor</h1>
                 <p>
@@ -36,14 +36,14 @@ const Thor = () => {
             </div>
           </article>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://sportshub.cbsistatic.com/i/2021/03/18/0025547d-9d0e-43ea-8613-61ac6d71fe52/thor-7-hammer-changes-mjolnir-powers-marvel-comics-spoilersjpg-1237231.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Arma</h2>
                 <h1>Mjolnir</h1>
                 <p>

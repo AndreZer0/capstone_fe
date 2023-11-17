@@ -17,11 +17,21 @@
   text-decoration: none;
   margin: auto;
   padding-right: 1em;
+  padding-left: 1em;
 }
 .me-auto a {
   color: black;
 }
+
 .me-auto a:hover {
+  color: white;
+}
+
+.me-auto a:visited {
+  color: black;
+}
+
+.me-auto a:hover:visited {
   color: white;
 }
 

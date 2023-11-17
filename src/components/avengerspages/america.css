@@ -1,26 +1,35 @@
 /** @format */
 .america {
-  background-color: rgb(100, 159, 252);
+  background-image: radial-gradient(circle, lightblue, rgb(0, 145, 255));
   height: 100%;
 }
 .falco {
-  background-color: rgb(164, 114, 233);
+  background-image: radial-gradient(
+    circle,
+    rgb(214, 150, 240),
+    rgb(181, 6, 230)
+  );
   height: 100%;
 }
 .stark {
-  background-color: #fcd33f;
+  background-image: radial-gradient(circle, yellow, orange);
   height: 100%;
 }
 .hulk {
-  background-color: rgb(52, 149, 57);
+  background-image: radial-gradient(circle, palegreen, rgb(38, 107, 7));
   height: 100%;
 }
 .thor {
-  background-color: rgb(144, 144, 144);
+  background-image: radial-gradient(
+    circle,
+    rgb(192, 194, 195),
+    rgb(82, 84, 86)
+  );
+
   height: 100%;
 }
 .widow {
-  background-color: rgb(183, 0, 0);
+  background-image: radial-gradient(circle, rgb(228, 79, 79), rgb(195, 38, 11));
   height: 100%;
 }
 .avengers {

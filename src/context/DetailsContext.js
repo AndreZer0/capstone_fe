@@ -15,7 +15,9 @@ export const DetailsProvider = ({ children }) => {
   const [postComments, setPostComments] = useState({});
   const [commentAdded, setCommentAdded] = useState(false);
   const [newComment, setNewComment] = useState('');
+
   const { comicId } = useParams();
+
   const session = useSession();
   const navigate = useNavigate();
 
@@ -175,6 +177,7 @@ export const DetailsProvider = ({ children }) => {
         postComments,
         commentAdded,
         newComment,
+
         getComicsByCardId,
         getComments,
         addNewComment,

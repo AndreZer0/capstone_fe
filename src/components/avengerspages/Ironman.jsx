@@ -10,16 +10,16 @@ const Ironman = () => {
     <>
       <MyNav />
       <div className='stark'>
-        <section class='articles'>
+        <section className='articles'>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://wallpapercave.com/wp/wp2538842.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Tony Stark</h2>
                 <h1>Iron Man</h1>
                 <p>
@@ -37,14 +37,14 @@ const Ironman = () => {
             </div>
           </article>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://i.pinimg.com/736x/d1/31/65/d131654d3110dda35ed5712cba335df3.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Arma</h2>
                 <h1>Armature Mark</h1>
                 <p>

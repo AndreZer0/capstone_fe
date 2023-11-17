@@ -12,14 +12,14 @@ const Falco = () => {
       <div className='falco'>
         <section className='articles'>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://www.comicbookherald.com/wp-content/uploads/2017/02/hawkeye-and-thunderbolts-comic-cover-e1487815959253.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Clint Barton</h2>
                 <h1>Hawkeye</h1>
                 <p>
@@ -34,14 +34,14 @@ const Falco = () => {
             </div>
           </article>
           <article className='avengers'>
-            <div class='article-wrapper'>
+            <div className='article-wrapper'>
               <div className='bio-pic'>
                 <img
                   src='https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/03/hawkeye-freefall-header-1.jpg'
                   alt=''
                 />
               </div>
-              <div class='article-body'>
+              <div className='article-body'>
                 <h2>Arma</h2>
                 <h1>Arco e frecce</h1>
                 <p>

@@ -21,10 +21,8 @@
   vertical-align: top;
 }
 
-/* footer left*/
-
 .footer .about {
-  line-height: 16px;
+  line-height: 24px;
   color: black;
   font-size: 20px;
   font-weight: normal;
@@ -34,9 +32,10 @@
 .footer .about span {
   display: block;
   color: black;
-  font-size: 14px;
+
   font-weight: bold;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .footer .icons {
@@ -45,13 +44,11 @@
 
 .footer .icons a {
   display: inline-block;
-  width: 35px;
-  height: 35px;
+
   cursor: pointer;
-  background-color: #33383b;
-  border-radius: 2px;
+  margin: 20px;
   font-size: 20px;
-  color: black;
+  color: rgb(0, 0, 0);
   text-align: center;
   line-height: 35px;
   margin-right: 3px;
@@ -64,8 +61,7 @@
   width: 30%;
 }
 
-.footer .footer-center i {
-  background-color: #33383b;
+.footer .footer-center svg {
   color: black;
   font-size: 25px;
   width: 38px;
@@ -77,9 +73,8 @@
   vertical-align: middle;
 }
 
-.footer .footer-center i.fa-envelope {
-  font-size: 17px;
-  line-height: 38px;
+svg:hover {
+  color: #0099ff;
 }
 
 .footer .footer-center p {
@@ -108,17 +103,6 @@
   width: 35%;
 }
 
-.footer h2 {
-  color: black;
-  font-size: 36px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.footer h2 span {
-  color: #0099ff;
-}
-
 .footer .menu a {
   font-size: 25px;
   text-decoration: none;
@@ -137,6 +121,18 @@
   margin: 0;
 }
 
+.logo-footer {
+  width: 100px;
+
+  margin-bottom: 20px;
+}
+.footer-final-logo h2 {
+  color: #0099ff;
+  font-size: 3em;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000;
+  margin-left: 20px;
+}
 @media (max-width: 767px) {
   .footer {
     font-size: 14px;
@@ -151,5 +147,8 @@
   }
   .footer .footer-center i {
     margin-left: 0;
+  }
+  .footer-final-logo {
+    flex-direction: column;
   }
 }
