@@ -77,11 +77,11 @@ const Signup = () => {
           email: '',
           password: '',
         });
-        setMessage('Benvenuto, ora ti re indirizziamo alla pagina principale!');
+        setMessage('Benvenuto, ora ti re indirizziamo alla pagina di login!');
         setTimeout(() => {
           setMessage('');
           setIsSuccessful(true);
-          navigate('/');
+          navigate('/login');
         }, 3000);
       } else {
         setMessage("Errore durante la creazione dell'utente");

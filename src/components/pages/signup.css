@@ -3,21 +3,22 @@
 .container-Background {
   background-image: url('https://img.freepik.com/premium-photo/19aug19_670672-261.jpg');
   height: 100vh;
-  padding: 8em;
+  padding: 2em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
   width: 100vw;
 }
+
 .format {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 14px;
   background: #f2f2f2;
-  width: 400px;
+  width: 30em;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 25px;
+  padding: 1em;
   margin: auto;
   position: relative;
   z-index: 1;
@@ -200,5 +201,15 @@
   100% {
     transform: translate3d(0, 0, 0);
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-Background {
+    padding: 1em;
+  }
+
+  .format {
+    padding: 0.5em;
   }
 }
