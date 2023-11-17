@@ -152,17 +152,6 @@ export const DetailsProvider = ({ children }) => {
     navigate(`/modify/${comicId}`);
   };
 
-  const handleAddToCart = album => {
-    dispatch(
-      addCart({
-        id: album._id,
-        title: album.title,
-        price: album.price,
-        cover: album.cover,
-      })
-    );
-  };
-
   useEffect(() => {
     getComicsByCardId(comicId);
     getComments();
@@ -183,7 +172,7 @@ export const DetailsProvider = ({ children }) => {
         addNewComment,
 
         handleEditClick,
-        handleAddToCart,
+
         isUserCommentAuthor,
         handleEditComment,
         handleDeleteComment,
