@@ -98,8 +98,8 @@ const DetailPage = () => {
                     <img src={album.images[3]} />
                     <div className='end'>
                       <p>
-                        L'anteprima finisce qui, sennò ti roviniamo la lettura!
-                        Ma se sei interessato, puoi acquistarlo!
+                        L'anteprima finisce qui, altrimenti ti roviniamo la
+                        lettura! Ma se sei interessato, puoi acquistarlo!
                       </p>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
