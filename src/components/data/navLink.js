@@ -5,9 +5,6 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 
 const NavLinks = () => {
-  const reloadHome = () => {
-    location.reload();
-  };
   const linkStyle = {
     fontSize: '1.3em',
   };
@@ -17,8 +14,7 @@ const NavLinks = () => {
       <Link
         className='redirect'
         to='/'
-        style={linkStyle}
-        onClick={reloadHome}>
+        style={linkStyle}>
         Home
       </Link>
       <Nav.Link
