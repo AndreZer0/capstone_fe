@@ -17,7 +17,7 @@ const Thanos = () => {
                 <h2>Thanos</h2>
               </div>
               <div className='grouptext'>
-                <h3>ALTER EGO</h3>
+                <h3>ALTER EGO:</h3>
                 <h2>-</h2>
               </div>
               <div className='grouptext'>
